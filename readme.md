@@ -20,7 +20,7 @@ as your development environment for this project.
 9. From the projects root folder run `sudo composer dump-autoload`
 10. From the projects root folder run `sudo npm install`
 11. From the projects root folder run `sudo gulp`
-12. From the projects root folder run `php artisan clear:cache`
+12. From the projects root folder run `php artisan config:cache`
 
 ### Testing the API with Postman:
 
