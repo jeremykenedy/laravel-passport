@@ -27,8 +27,8 @@ as your development environment for this project.
 
 ##### Postman Settings
 ###### GET:
-	* http://laravel.local/api/user
-	* http://laravel.local/api/orders
+	http://laravel.local/api/user
+	http://laravel.local/api/orders
 
 ###### Headers:
 	Authorization:  	Bearer + TOKEN
