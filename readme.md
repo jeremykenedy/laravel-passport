@@ -6,7 +6,7 @@ as your development environment for this project.
 ### Quick Project Setup
 ###### (Not including the dev environment)
 
-1. Run `sudo git https://github.com/jeremykenedy/laravel-passport.git laravel-passport`
+1. Run `sudo git clone https://github.com/jeremykenedy/laravel-passport.git laravel-passport`
 2. Run `sudo composer update` from the projects root folder
 3. Create a MySQL database for the project
     * ```mysql -u root -p```, if using Vagrant: ```mysql -u homestead -psecret```
