@@ -35,5 +35,11 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::pruneRevokedTokens();
 
+        Passport::tokensCan([
+            'place-orders'  => 'Place orders',
+            'delete-orders' => 'Delete orders',
+            'check-status'  => 'Check order status',
+        ]);
+
     }
 }

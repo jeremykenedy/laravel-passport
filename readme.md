@@ -23,6 +23,17 @@ as your development environment for this project.
 12. From the projects root folder run `sudo gulp`
 13. From the projects root folder run `php artisan clear:cache`
 
+### Testing the API with Postman:
+
+##### Postman Settings
+###### GET:
+	* http://laravel.local/api/user
+	* http://laravel.local/api/orders
+
+###### Headers:
+	Authorization:  	Bearer + TOKEN
+	Accept:				application/json
+
 ---
 
 ## Laravel PHP Framework
