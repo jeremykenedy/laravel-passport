@@ -12,10 +12,10 @@ as your development environment for this project.
     * ```mysql -u root -p```, if using Vagrant: ```mysql -u homestead -psecret```
     * ```create database passport;```
     * ```\q```
-~~4. From the projects root run `cp .env.example .env`~~ Not needed in Laravel 5.3
+4. ~~From the projects root run `cp .env.example .env`~~ Not needed in Laravel 5.3
 5. Enter your database settings in the `.env` file
 6. From the projects root folder run `sudo chmod -R 755 ../laravel-passport`
-~~7. From the projects root folder run `php artisan key:generate`~~ Not needed in Laravel 5.3
+7. ~~From the projects root folder run `php artisan key:generate`~~ Not needed in Laravel 5.3
 8. From the projects root folder run `php artisan migrate`
 9. From the projects root folder run `sudo composer dump-autoload`
 10. From the projects root folder run `sudo npm install`
