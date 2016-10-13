@@ -14,7 +14,6 @@ as your development environment for this project.
     * ```\q```
 ~~4. From the projects root run `cp .env.example .env`~~ Not needed in Laravel 5.3
 5. Enter your database settings in the `.env` file
-
 6. From the projects root folder run `sudo chmod -R 755 ../laravel-passport`
 ~~7. From the projects root folder run `php artisan key:generate`~~ Not needed in Laravel 5.3
 8. From the projects root folder run `php artisan migrate`
