@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+
+
+
+
+
+Route::resource('users', 'UsersManagementController');
+Route::get('users', [
+    'uses' 			=> 'UsersManagementController@index'
+]);
