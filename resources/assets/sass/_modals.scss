@@ -1,0 +1,29 @@
+.modal .modal-header {
+	@include vendor(border-top-left-radius, $standard-border-radius);
+	@include vendor(border-top-right-radius, $standard-border-radius);
+}
+.modal-success .modal-header {
+    border-bottom: 1px solid $brand-white;
+    background-color: $brand-success;
+    color: $brand-white;
+}
+.modal-warning .modal-header {
+    border-bottom: 1px solid $brand-white;
+    background-color: $brand-warning;
+    color: $brand-white;
+}
+.modal-danger .modal-header {
+    border-bottom: 1px solid $brand-white;
+    background-color: $brand-danger;
+    color: $brand-white;
+}
+.modal-info .modal-header {
+    border-bottom: 1px solid $brand-white;
+    background-color: $brand-info;
+    color: $brand-white;
+}
+.modal-primary .modal-header {
+    border-bottom: 1px solid $brand-white;
+    background-color: $brand-primary;
+    color: $brand-white;
+}
