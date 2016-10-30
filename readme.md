@@ -3,6 +3,8 @@
 This will act as the API server for laravel-consume. It is recommended that you setup and use Laravel Homestead
 as your development environment for this project.
 
+Personal Token Scoped with middleware for API routes is configured and ready to go.
+
 Included Laravel Scaffolding **User**, **Editor**, and **Administrator Authentication**
 with CRUD (Create, Read, Update, Delete) user management.
 
