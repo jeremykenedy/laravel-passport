@@ -19,6 +19,9 @@ elixir(mix => {
 	    .version([
 	    	'css/app.css',
 	    	'js/app.js'
-	    ]);
+	    ])
+		.browserSync({
+		    proxy: 'laravel.local'
+		});
 });
 
