@@ -6,9 +6,6 @@
 
 @section('template_fastload_css')
 
-
-
-
 .panel-footer {
 	display: none;
 }

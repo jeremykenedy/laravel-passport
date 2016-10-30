@@ -69,9 +69,12 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
 
-        // Add User Role
-        $user->assignRole(Role::whereName('user')->first());
-        $user->save();
+        // Add User Role - First registered user to system is admin user
+        if ($user->id === 1) {
+            $user->assignRole(Role::whereName('administrator')->first());
+        } else {
+            $user->assignRole(Role::whereName('user')->first());
+        }
 
         return $user;
 
