@@ -6,19 +6,20 @@ as your development environment for this project.
 ### Quick Project Setup
 ###### (Not including the dev environment)
 
-1. Run `sudo git https://github.com/jeremykenedy/laravel-passport.git laravel-passport`
-2. Create a MySQL database for the project
+1. Run `sudo git clone https://github.com/jeremykenedy/laravel-passport.git laravel-passport`
+2. Run `sudo composer update` from the projects root folder
+3. Create a MySQL database for the project
     * ```mysql -u root -p```, if using Vagrant: ```mysql -u homestead -psecret```
     * ```create database passport;```
     * ```\q```
-3. From the projects root run `cp .env.example .env`
-4. Enter your database settings in the `.env` file
-5. Run `sudo composer update` from the projects root folder
+4. From the projects root run `cp .env.example .env`
+5. Enter your database settings in the `.env` file
 6. From the projects root folder run `sudo chmod -R 755 ../laravel-passport`
 7. From the projects root folder run `php artisan key:generate`
 8. From the projects root folder run `php artisan migrate`
 9. From the projects root folder run `sudo composer dump-autoload`
 10. From the projects root folder run `php artisan db:seed`
+11. From the projects root folder run `php artisan passport:install`
 11. From the projects root folder run `sudo npm install`
 12. From the projects root folder run `sudo gulp`
 13. From the projects root folder run `php artisan config:cache`
@@ -27,8 +28,8 @@ as your development environment for this project.
 
 ##### Postman Settings
 ###### GET:
-	* http://laravel.local/api/user
-	* http://laravel.local/api/orders
+	http://laravel.local/api/user
+	http://laravel.local/api/orders
 
 ###### Headers:
 	Authorization:  	Bearer + TOKEN
