@@ -5,6 +5,14 @@
 @endsection
 
 @section('template_fastload_css')
+
+
+
+
+.panel-footer {
+	display: none;
+}
+
 @endsection
 
 @section('content')
@@ -68,5 +76,26 @@
 
 	@include('scripts.delete-modal-script')
 	@include('scripts.save-modal-script')
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			$('input').on('input', function() {
+
+				var check1 = ($('#email').val() == null) || ($('#email').val() == '');
+				var check2 = ($('#name').val() == null) || ($('#name').val() == '');
+
+			   	if(check1 || check2) {
+			      	$('.panel-footer').hide();
+			    } else {
+			      	$('.panel-footer').show();
+			    }
+
+			});
+
+		});
+
+	</script>
 
 @endsection

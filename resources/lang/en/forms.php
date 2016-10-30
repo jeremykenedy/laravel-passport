@@ -41,15 +41,16 @@ return [
     */
 
 	'edit-user-admin-title'				=>'Edit User Information',
-
 	'label-username'					=> 'Username',
 	'ph-username'						=> 'Username',
-
 	'label-useremail'					=> 'User Email',
 	'ph-useremail'						=> 'User Email',
-
+	'label-userrole_id'					=> 'User Access Level',
+	'option-label'						=>	'Select a Level',
+	'option-user'						=>	'User',
+	'option-editor'						=>	'Editor',
+	'option-admin'						=>	'Administrator',
 	'submit-btn-text'					=>	' Save Changes',
-
 	'submit-btn-icon'					=>	'fa-save',
 	'username-icon'						=>	'fa-user-o',
 	'useremail-icon'					=>	'fa-envelope-o',

@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Validator;
 use App\User;
+use App\Role;
+use Redirect;
 
 class UsersManagementController extends Controller
 {
@@ -19,7 +21,7 @@ class UsersManagementController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('administrator');
     }
 
     /**
@@ -44,8 +46,12 @@ class UsersManagementController extends Controller
     public function index()
     {
         $users = User::all();
+        $roles = \DB::table('role_user')->get();
 
-        return view('admin.show-users', ['users' => $users]);
+        return view('admin.show-users', [
+            'users' => $users,
+            'roles' => $roles
+        ]);
     }
 
     /**
@@ -82,8 +88,13 @@ class UsersManagementController extends Controller
             $user               = new User;
             $user->name         = $request->input('name');
             $user->email        = $request->input('email');
+            $userAccessLevel    = $request->input('user_level');
             $user->password     = bcrypt($request->input('password'));
             $user->save();
+
+            // Add User Role
+            $user->assignRole($userAccessLevel);
+
             return redirect('users')->with('success', 'Successfully created user');
         }
     }
@@ -144,6 +155,7 @@ class UsersManagementController extends Controller
             $user->email        = $request->input('email');
             $user->save();
             return redirect('users/'.$user->id)->with('success', 'Successfully updated user');
+            //return Redirect::back()->with('success', 'Successfully updated user');
         }
     }
 

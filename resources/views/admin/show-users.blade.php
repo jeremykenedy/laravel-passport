@@ -36,6 +36,7 @@
 								<th>ID</th>
 								<th>Name</th>
 								<th>Email</th>
+								<th>Access Level</th>
 								<th>Created</th>
 								<th>Updated</th>
 								<th class="no-sort no-search">Actions</th>
@@ -51,6 +52,37 @@
 									<td><a href="{{ URL::to('users/' . $a_user->id) }}">{{$a_user->id}}</a></td>
 									<td><a href="{{ URL::to('users/' . $a_user->id) }}">{{$a_user->name}} </a></td>
 									<td><a href="{{ URL::to('users/' . $a_user->id) }}">{{$a_user->email}} </a></td>
+									<td>
+										@foreach ($roles as $role)
+											@if ( ($a_user->id) == $role->user_id )
+												@if ($role->role_id == 1 )
+													@php
+											            $access_level   = 'User';
+											            $access_class 	= 'info';
+											            $access_icon	= 'user';
+													@endphp
+												@elseif ($role->role_id == 2 )
+													@php
+											            $access_level   = 'Editor';
+											            $access_class 	= 'warning';
+											            $access_icon	= 'user';
+													@endphp
+												@elseif ($role->role_id == 3 )
+													@php
+											            $access_level   = 'Administrator';
+											            $access_class 	= 'danger';
+											            $access_icon	= 'user';
+													@endphp
+												@endif
+											@endif
+										@endforeach
+										<a href="{{ URL::to('users/' . $a_user->id) }}">
+											<span class="label label-{{ $access_class }}">
+												<i class="fa fa-fw fa-{{$access_icon}}"></i>
+												{{$access_level}}
+											</span>
+										</a>
+									</td>
 									<td><a href="{{ URL::to('users/' . $a_user->id) }}">{{$a_user->created_at}} </a></td>
 									<td><a href="{{ URL::to('users/' . $a_user->id) }}">{{$a_user->updated_at}} </a></td>
 									<td>

@@ -51,6 +51,16 @@
 							</div>
 
 							<div class="form-group has-feedback row">
+								{!! Form::label('user_level', 'User Access Level' , array('class' => 'col-md-3 control-label')); !!}
+								<div class="col-md-9">
+									<div class="input-group">
+						        		{!! Form::select('user_level', array('0' => 'Select Access Level', '1' => 'User', '2' => 'Editor', '3' => 'Administrator'), NULL, array('class' => 'form-control')) !!}
+										<label class="input-group-addon" for="user_level"><i class="fa fa-fw fa-exclamation-circle" aria-hidden="true"></i></label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group has-feedback row">
 								{!! Form::label('password', Lang::get('forms.create_user_label_password'), array('class' => 'col-md-3 control-label')); !!}
 								<div class="col-md-9">
 						      		<div class="input-group">
@@ -64,7 +74,7 @@
 								{!! Form::label('password_confirmation', Lang::get('forms.create_user_label_pw_confirmation'), array('class' => 'col-md-3 control-label')); !!}
 								<div class="col-md-9">
 						      		<div class="input-group">
-						        		{!! Form::text('password_confirmation', NULL, array('id' => 'password_confirmation', 'class' => 'form-control', 'placeholder' => Lang::get('forms.create_user_ph_pw_confirmation'))) !!}
+						        		{!! Form::password('password_confirmation', array('id' => 'password_confirmation', 'class' => 'form-control', 'placeholder' => Lang::get('forms.create_user_ph_pw_confirmation'))) !!}
 						        		<label class="input-group-addon" for="password_confirmation"><i class="fa fa-fw {{ Lang::get('forms.create_user_icon_pw_confirmation') }}" aria-hidden="true"></i></label>
 						      		</div>
 						      	</div>
