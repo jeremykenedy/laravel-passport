@@ -3,6 +3,10 @@
 This will act as the API server for laravel-consume. It is recommended that you setup and use Laravel Homestead
 as your development environment for this project.
 
+Included Laravel Scaffolding **User**, **Editor**, and **Administrator Authentication**
+with CRUD (Create, Read, Update, Delete) user management.
+
+
 ### Quick Project Setup
 ###### (Not including the dev environment)
 
