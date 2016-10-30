@@ -1,4 +1,4 @@
-## Laravel-passport is a basic API server build using Laravel, Passport, and Vue.js [![License](http://jeremykenedy.com/license-mit.svg)](LICENSE)
+## Laravel-passport is a basic API server build using Laravel, Passport, and Vue.js [![License](http://jeremykenedy.com/license-mit.svg)](LICENSE) [![Build Status](https://travis-ci.org/jeremykenedy/laravel-passport.svg?branch=master)](https://travis-ci.org/jeremykenedy/laravel-passport)
 
 This will act as the API server for laravel-consume. It is recommended that you setup and use Laravel Homestead
 as your development environment for this project.
@@ -21,7 +21,7 @@ as your development environment for this project.
 10. From the projects root folder run `php artisan db:seed`
 11. From the projects root folder run `sudo npm install`
 12. From the projects root folder run `sudo gulp`
-13. From the projects root folder run `php artisan clear:cache`
+13. From the projects root folder run `php artisan config:cache`
 
 ### Testing the API with Postman:
 
