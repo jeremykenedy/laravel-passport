@@ -18,6 +18,7 @@ before_script:
   - composer dump-autoload
   - php artisan db:seed
   - php artisan passport:install
+  - npm install -g webpack
   - npm install
   - gulp
   - php artisan config:cache
